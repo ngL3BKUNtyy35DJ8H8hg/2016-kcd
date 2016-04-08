@@ -16,7 +16,7 @@ namespace DoiToaDo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new dlgMaHoaToaDo());
-            Application.Run(new frmMaHoa99());                
+            Application.Run(new frmMaHoa99());                 
         }
     }
 }
