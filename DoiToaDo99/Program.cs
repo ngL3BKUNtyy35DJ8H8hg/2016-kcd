@@ -13,7 +13,7 @@ namespace DoiToaDo
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            Application.EnableVisualStyles(); 
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new dlgMaHoaToaDo());
             Application.Run(new frmMaHoa99());                 
