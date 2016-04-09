@@ -1,0 +1,12 @@
+﻿Các đoạn convert fail
+//[CONVERT FAIL]
+Đoạn code sửa chưa test
+//[EDITING]
+
+Ngày 2016-01-07
+1. Sửa lại hàm private void AddNewObj(short pShift) của class CBdTC
+
+Ngày 2015-06-24
+1. Chưa xử lý convert Utils.CopyArray
+(PointF[])Utils.CopyArray((Array)this.myPts, new PointF[num8 + 1]);
+

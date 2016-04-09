@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56145E4C-C411-4D4B-A60C-577709C43C7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HuanLuyen</RootNamespace>
+    <AssemblyName>HuanLuyen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADOConnection, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ADOConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="danhmuc, Version=1.0.1983.17974, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\danhmuc.dll</HintPath>
+    </Reference>
+    <Reference Include="DBiGraphicObjs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DBiGraphicObjs.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ScreenCapture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ScreenCapture.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BDTC\CBanDoNen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CBdTC.cs" />
+    <Compile Include="Classes\BDTC\CFOUNDNODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CFOUNDOBJECT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CNodePattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CNodePatterns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CSymbol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CSymbols.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BDTC\CThumbNail.cs" />
+    <Compile Include="Classes\BDTC\CThumbNails.cs" />
+    <Compile Include="Classes\BDTC\modBdTC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\DanhMuc\CAirport.cs" />
+    <Compile Include="Classes\DanhMuc\CAirports.cs" />
+    <Compile Include="Classes\BaiTap\CBaiTap.cs" />
+    <Compile Include="Classes\BaiTap\CBaiTapKhuats.cs" />
+    <Compile Include="Classes\BaiTap\CBaiTapRadas.cs" />
+    <Compile Include="Classes\BaiTap\CBaiTaps.cs" />
+    <Compile Include="Classes\DuongBay\CBasePath.cs" />
+    <Compile Include="Classes\Enums\DPGFormat.cs" />
+    <Compile Include="Classes\HuanLuyen\CDefaHL.cs" />
+    <Compile Include="Classes\DuongBay\CFlight.cs" />
+    <Compile Include="Classes\DuongBay\CFlights.cs" />
+    <Compile Include="Classes\HuanLuyen\CHLProcess.cs" />
+    <Compile Include="Classes\HuanLuyen\CHuanLuyen.cs" />
+    <Compile Include="Classes\DanhMuc\CKhongVuc.cs" />
+    <Compile Include="Classes\DanhMuc\CKhongVucs.cs" />
+    <Compile Include="Classes\DanhMuc\CKhuat.cs" />
+    <Compile Include="Classes\DanhMuc\CKhuatPt.cs" />
+    <Compile Include="Classes\DanhMuc\CKhuats.cs" />
+    <Compile Include="Classes\DanhMuc\CLoaiBaiTap.cs" />
+    <Compile Include="Classes\DanhMuc\CLoaiBaiTaps.cs" />
+    <Compile Include="Classes\DanhMuc\CLoaiMB.cs" />
+    <Compile Include="Classes\DanhMuc\CLoaiMBs.cs" />
+    <Compile Include="Classes\DanhMuc\CLoaiTop.cs" />
+    <Compile Include="Classes\DanhMuc\CLoaiTops.cs" />
+    <Compile Include="Classes\DanhMuc\CMayBay.cs" />
+    <Compile Include="Classes\DuongBay\CPath.cs" />
+    <Compile Include="Classes\DuongBay\CPaths.cs" />
+    <Compile Include="Classes\DanhMuc\CRada.cs" />
+    <Compile Include="Classes\DanhMuc\CRadaFlight.cs" />
+    <Compile Include="Classes\DanhMuc\CRadaFlightMT.cs" />
+    <Compile Include="Classes\DanhMuc\CRadas.cs" />
+    <Compile Include="Classes\CStrPattern.cs" />
+    <Compile Include="Classes\modHuanLuyen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Tinhbao5x5\CTieuDo55.cs" />
+    <Compile Include="Classes\Tinhbao9x9\CTieuDo99.cs" />
+    <Compile Include="Classes\Tinhbao9x9\CTieuDoIndex.cs" />
+    <Compile Include="Classes\HuanLuyen\CTinhHuong.cs" />
+    <Compile Include="Classes\HuanLuyen\CTinhHuongs.cs" />
+    <Compile Include="Classes\BaiTap\CTop.cs" />
+    <Compile Include="Classes\BaiTap\CTops.cs" />
+    <Compile Include="Classes\Enums\enCachNhap.cs" />
+    <Compile Include="Classes\Enums\enCachVong.cs" />
+    <Compile Include="Classes\Enums\enLoaiRada.cs" />
+    <Compile Include="Classes\Enums\enLoaiTop.cs" />
+    <Compile Include="Classes\Enums\enRadaStatus.cs" />
+    <Compile Include="Classes\Enums\enTopStatus.cs" />
+    <Compile Include="Classes\DuongBay\FlightNode.cs" />
+    <Compile Include="Classes\ListenerProcess.cs" />
+    <Compile Include="Classes\Enums\MapCenter.cs" />
+    <Compile Include="Classes\Enums\MapPoint.cs" />
+    <Compile Include="Classes\modBanDo.cs" />
+    <Compile Include="Classes\myModule.cs" />
+    <Compile Include="Classes\DuongBay\PathNode.cs" />
+    <Compile Include="Classes\Enums\struNodeTG.cs" />
+    <Compile Include="Classes\Enums\struPhuongVi.cs" />
+    <Compile Include="Classes\Enums\TurnValue.cs" />
+    <Compile Include="Classes\UserConnection.cs" />
+    <Compile Include="Decompiler\dlgBaiTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTap.Designer.cs">
+      <DependentUpon>dlgBaiTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTapHinhThai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTapHinhThai.Designer.cs">
+      <DependentUpon>dlgBaiTapHinhThai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTapRada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTapRada.Designer.cs">
+      <DependentUpon>dlgBaiTapRada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTapTinhHuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgBaiTapTinhHuong.designer.cs">
+      <DependentUpon>dlgBaiTapTinhHuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decompiler\dlgFlightNodeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgFlightNodeEdit.Designer.cs">
+      <DependentUpon>dlgFlightNodeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decompiler\dlgTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgTop.Designer.cs">
+      <DependentUpon>dlgTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgBaiTapViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgBaiTapViewer.Designer.cs">
+      <DependentUpon>dlgBaiTapViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgBaiTapViewer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgBaiTapViewer2.Designer.cs">
+      <DependentUpon>dlgBaiTapViewer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decompiler\dlgBanTinTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decompiler\dlgBanTinTB.Designer.cs">
+      <DependentUpon>dlgBanTinTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgGocPvCl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgGocPvCl.Designer.cs">
+      <DependentUpon>dlgGocPvCl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgHuanLuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgHuanLuyen.Designer.cs">
+      <DependentUpon>dlgHuanLuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTopEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTopEdit.Designer.cs">
+      <DependentUpon>dlgTopEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTopMoi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTopMoi2.Designer.cs">
+      <DependentUpon>dlgTopMoi2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTopNodeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTopNodeEdit.Designer.cs">
+      <DependentUpon>dlgTopNodeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Decompiler\dlgBanTinTB.resx">
+      <DependentUpon>dlgBanTinTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decompiler\dlgBaiTapHinhThai.resx">
+      <DependentUpon>dlgBaiTapHinhThai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decompiler\dlgFlightNodeEdit.resx">
+      <DependentUpon>dlgFlightNodeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgHuanLuyen.resx">
+      <DependentUpon>dlgHuanLuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMapXLib">
+      <Guid>{E760686B-BC9E-4802-9ECF-175FDF4062CE}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MapXLib">
+      <Guid>{E760686B-BC9E-4802-9ECF-175FDF4062CE}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Tinhbaogan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DecompilerList.txt" />
+    <Content Include="Notes.txt" />
+    <None Include="Resources\zoomout.bmp" />
+    <None Include="Resources\zoomin.bmp" />
+    <None Include="Resources\zoom1x.bmp" />
+    <None Include="Resources\UNDO.BMP" />
+    <None Include="Resources\Text.bmp" />
+    <None Include="Resources\Table.bmp" />
+    <None Include="Resources\SongSongKin.bmp" />
+    <None Include="Resources\SongSong.bmp" />
+    <None Include="Resources\ruler.bmp" />
+    <None Include="Resources\Refresh.bmp" />
+    <None Include="Resources\REDO.BMP" />
+    <None Include="Resources\Rectangle.bmp" />
+    <None Include="Resources\progbar.gif" />
+    <None Include="Resources\polygon1.bmp" />
+    <None Include="Resources\Options.bmp" />
+    <None Include="Resources\NewDT.bmp" />
+    <None Include="Resources\MuiTenNho.bmp" />
+    <None Include="Resources\MuiTenHo.bmp" />
+    <None Include="Resources\MuiTenDon.bmp" />
+    <None Include="Resources\MuiTen.bmp" />
+    <None Include="Resources\hand.bmp" />
+    <None Include="Resources\GoToPrevious.bmp" />
+    <None Include="Resources\GoToNext.bmp" />
+    <None Include="Resources\FillUp.bmp" />
+    <None Include="Resources\FillDown.bmp" />
+    <None Include="Resources\DauKyHieu.bmp" />
+    <None Include="Resources\cycle.bmp" />
+    <None Include="Resources\curve.bmp" />
+    <None Include="Resources\CN.bmp" />
+    <None Include="Resources\closedcurve.bmp" />
+    <None Include="Resources\Bando.jpg" />
+    <None Include="Resources\arrow.bmp" />
+    <None Include="Resources\Arc.bmp" />
+    <None Include="Resources\AddSymbol.bmp" />
+    <None Include="Resources\AddPolyLine.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{B57F00DF-D7E0-48F2-9C22-133978891E8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BDTCLib</RootNamespace>
+    <AssemblyName>BDTCLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BDTCLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BDTCLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADOConnection, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ADOConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="danhmuc, Version=1.0.1983.17974, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\danhmuc.dll</HintPath>
+    </Reference>
+    <Reference Include="DBiGraphicObjs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DBiGraphicObjs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CBanDo.vb" />
+    <Compile Include="CSymbol.vb" />
+    <Compile Include="CThumbNails.vb" />
+    <Compile Include="dlgBanDoNho.designer.vb">
+      <DependentUpon>dlgBanDoNho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgBanDoNho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgCacKyHieu.Designer.vb">
+      <DependentUpon>dlgCacKyHieu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgCacKyHieu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangeColor.designer.vb">
+      <DependentUpon>dlgChangeColor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangeColor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangeImage.designer.vb">
+      <DependentUpon>dlgChangeImage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangeImage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangeLabel.designer.vb">
+      <DependentUpon>dlgChangeLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangeLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangePie.designer.vb">
+      <DependentUpon>dlgChangePie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangePie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangeSymbol.Designer.vb">
+      <DependentUpon>dlgChangeSymbol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangeSymbol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangeTable.Designer.vb">
+      <DependentUpon>dlgChangeTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangeTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangeText.Designer.vb">
+      <DependentUpon>dlgChangeText.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangeText.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgCopyKH.Designer.vb">
+      <DependentUpon>dlgCopyKH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgCopyKH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgEditMenu.Designer.vb">
+      <DependentUpon>dlgEditMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgEditMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgGetColor.Designer.vb">
+      <DependentUpon>dlgGetColor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgGetColor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgGetName.Designer.vb">
+      <DependentUpon>dlgGetName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgGetName.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOption.designer.vb">
+      <DependentUpon>dlgOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOptions.Designer.vb">
+      <DependentUpon>dlgOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgThumbnailOption.designer.vb">
+      <DependentUpon>dlgThumbnailOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgThumbnailOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgZoomTo.Designer.vb">
+      <DependentUpon>dlgZoomTo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgZoomTo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modBanDo.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="myModule.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dlgBanDoNho.resx">
+      <DependentUpon>dlgBanDoNho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgCacKyHieu.resx">
+      <DependentUpon>dlgCacKyHieu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangeColor.resx">
+      <DependentUpon>dlgChangeColor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangeImage.resx">
+      <DependentUpon>dlgChangeImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangeLabel.resx">
+      <DependentUpon>dlgChangeLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangePie.resx">
+      <DependentUpon>dlgChangePie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangeSymbol.resx">
+      <DependentUpon>dlgChangeSymbol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangeTable.resx">
+      <DependentUpon>dlgChangeTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangeText.resx">
+      <DependentUpon>dlgChangeText.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgCopyKH.resx">
+      <DependentUpon>dlgCopyKH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgEditMenu.resx">
+      <DependentUpon>dlgEditMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgGetColor.resx">
+      <DependentUpon>dlgGetColor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgGetName.resx">
+      <DependentUpon>dlgGetName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOption.resx">
+      <DependentUpon>dlgOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOptions.resx">
+      <DependentUpon>dlgOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgThumbnailOption.resx">
+      <DependentUpon>dlgThumbnailOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgZoomTo.resx">
+      <DependentUpon>dlgZoomTo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMapXLib">
+      <Guid>{E760686B-BC9E-4802-9ECF-175FDF4062CE}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MapXLib">
+      <Guid>{E760686B-BC9E-4802-9ECF-175FDF4062CE}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPolyLine.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddSymbol.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arc.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bando.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closedcurve.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cycle.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DauKyHieu.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillDown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNext.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPrevious.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuiTen.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuiTenDon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuiTenHo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuiTenNho.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewDT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polygon1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progbar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REDO.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SongSong.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SongSongKin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UNDO.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom1x.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomout.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

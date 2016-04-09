@@ -3,7 +3,7 @@ namespace DoiToaDo
 {
     public partial class CMaHoa
     {
-        public int MaHoaID = 0;
+        public int MaHoaID = 0;  
         public string Ten;
         public string OLon99;
         public string OCoBan99;

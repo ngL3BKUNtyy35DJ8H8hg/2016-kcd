@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="BDTCLib.CBanDo">
+    <Position X="2.5" Y="1" Width="7.5" />
+    <NestedTypes>
+      <Struct Name="BDTCLib.CBanDo.SPLITSYMBOLS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CBanDo.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="BDTCLib.CBanDo.MapTools" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CBanDo.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>SZo/+u9/gjV3L34HW3q3adiKuq+Yfqj25q/wtv910t8=</HashCode>
+      <FileName>CBanDo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="BDTCLib.MAPPOINT">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>CBanDo.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
