@@ -309,27 +309,44 @@ namespace DoiToaDo
             });
             if (array.GetUpperBound(0) == 99)
             {
-                int num = 0;
+                int row = 0;
                 do
                 {
-                    int num2 = 0;
+                    int col = 0;
                     do
                     {
-                        int num3 = num * 10 + num2;
-                        string value = num.ToString("0") + num2.ToString("0");
+                        int num3 = row * 10 + col;
+                        string value = row.ToString("0") + col.ToString("0");
                         string name = "txtCoBan" + value;
-                        TextBox textBoxFromName = this.getTextBoxFromName(name);
-                        textBoxFromName.Text = double.Parse(array[num3]).ToString("00");
+                        TextBox txtOCoBan = (TextBox)Controls.Find(name, true)[0];
+                        txtOCoBan.Text = double.Parse(array[num3]).ToString("00");
                         if (value == array[num3])
-                            textBoxFromName.BackColor = Color.White;
+                            txtOCoBan.BackColor = SystemColors.Control;
                         else
-                            textBoxFromName.BackColor = Color.LightYellow;
-                        num2++;
+                            txtOCoBan.BackColor = Color.LightYellow;
+                        //Đánh chỉ số cho cột và hàng dùng đổi hàng loạt ô cơ bản
+                        col++;
                     }
-                    while (num2 <= 9);
-                    num++;
+                    while (col <= 9);
+                    row++;
                 }
-                while (num <= 9);
+                while (row <= 9);
+
+                //Kiểm tra và gán giá trị cho col đổi hàng loạt
+                for (int i = 0; i < 10; i++)
+                {
+                    TextBox txtOCoBan = (TextBox)Controls.Find("txtCoBan0" + i.ToString(), true)[0];
+                    TextBox txtCol = (TextBox)Controls.Find("col" + i.ToString(), true)[0];
+                    txtCol.Text = txtOCoBan.Text.Substring(1,1);
+                }
+
+                //Kiểm tra và gán giá trị cho row đổi hàng loạt
+                for (int i = 0; i < 10; i++)
+                {
+                    TextBox txtOCoBan = (TextBox)Controls.Find("txtCoBan" + i.ToString() + "0", true)[0];
+                    TextBox txtRow = (TextBox)Controls.Find("row" + i.ToString(), true)[0];
+                    txtRow.Text = txtOCoBan.Text.Substring(0, 1);
+                }
             }
         }
 
@@ -593,6 +610,9 @@ namespace DoiToaDo
                 return;
 
             UpdateChange();
+
+            if (m_txtEnter != null)
+                txtOLon00_Enter(this.m_txtEnter, null);
         }
 
 
@@ -666,11 +686,13 @@ namespace DoiToaDo
             }
         }
 
+        private TextBox m_txtEnter = null;
+
         private void txtOLon00_Enter(object sender, EventArgs e)
         {
             if (this.bLoaded)
             {
-                //Reset focus
+                //Reset focus Ô lớn
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 2; j++)
@@ -679,15 +701,18 @@ namespace DoiToaDo
                         if (objControls != null)
                         {
                             TextBox objTextBox = (TextBox)objControls[0];
-                            objTextBox.BackColor = Color.White;
+                            objTextBox.BackColor = SystemColors.Control;
                         }
                     }
                 }
 
-                TextBox textBox = (TextBox)sender;
-                textBox.BackColor = Color.LightYellow;
-                int num = (int)Math.Round(double.Parse(textBox.Name.Substring(7, 1)));
-                int num2 = (int)Math.Round(double.Parse(textBox.Name.Substring(8, 1)));
+                //Tô màu focus cho ô lớn đang chọn
+                m_txtEnter = (TextBox)sender;
+                m_txtEnter.BackColor = Color.LightYellow;
+
+
+                int num = (int)Math.Round(double.Parse(m_txtEnter.Name.Substring(7, 1)));
+                int num2 = (int)Math.Round(double.Parse(m_txtEnter.Name.Substring(8, 1)));
                 int num3 = num * 2 + num2;
                 this.lblIndex.Text = string.Concat(new string[]
                     {
@@ -927,6 +952,11 @@ namespace DoiToaDo
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOLon00_TextChanged(object sender, EventArgs e)
         {
 
         }
