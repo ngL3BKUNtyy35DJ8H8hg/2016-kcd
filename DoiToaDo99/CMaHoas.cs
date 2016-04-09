@@ -154,8 +154,6 @@ namespace DoiToaDo
                 catch (Exception expr_238)
                 {
                     throw expr_238;
-                    Exception ex = expr_238;
-                    throw ex;
                 }
                 finally
                 {
@@ -187,8 +185,6 @@ namespace DoiToaDo
                 catch (Exception expr_BA)
                 {
                     throw expr_BA;
-                    Exception ex = expr_BA;
-                    throw ex;
                 }
                 finally
                 {

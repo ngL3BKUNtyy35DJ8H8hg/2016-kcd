@@ -463,8 +463,6 @@ namespace HuanLuyen
             catch (Exception expr_92)
             {
                 throw expr_92;
-                Exception ex = expr_92;
-                throw ex;
             }
         }
         //public static void GocPvCl2File(string pFileName)

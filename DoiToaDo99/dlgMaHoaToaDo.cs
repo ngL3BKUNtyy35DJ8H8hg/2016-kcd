@@ -22,7 +22,6 @@ namespace DoiToaDo99
         private bool bLoaded;
         private string[] strMaHoaCoBan;
         private int m_SeleCoBanIndex = 0;
-        private bool m_CoBanDirty;
         private static int cantimMaHoaID = 0;
         public CMaHoa SeLeMaHoa
         {
@@ -39,7 +38,6 @@ namespace DoiToaDo99
             this.m_SeleMaHoa = null;
             this.bLoaded = false;
             this.m_SeleCoBanIndex = 0;
-            this.m_CoBanDirty = false;
             this.InitializeComponent();
         }
 

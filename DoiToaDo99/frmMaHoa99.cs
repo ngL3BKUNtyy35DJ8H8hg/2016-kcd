@@ -21,8 +21,8 @@ namespace DoiToaDo
         private bool bLoaded;
         private string[] strMaHoaCoBan;
         private int m_SeleCoBanIndex = 0;
-        private bool m_CoBanDirty;
         private static int m_cantimMaHoaID = 0;
+        private double m_index;
 
         public CMaHoa SeLeMaHoa
         {
@@ -39,7 +39,6 @@ namespace DoiToaDo
             this.m_SeleMaHoa = null;
             this.bLoaded = false;
             this.m_SeleCoBanIndex = 0;
-            this.m_CoBanDirty = false;
             this.InitializeComponent();
         }
 
@@ -113,7 +112,6 @@ namespace DoiToaDo
 
         private void frmMaHoa99_Load(object sender, EventArgs e)
         {
-            chkDoiTheoDongCot.Checked = false;
             chkDoiTheoDongCot_CheckedChanged(null, null);
 
             modHuanLuyen.myAppPara = "HuanLuyen.para";
@@ -203,9 +201,9 @@ namespace DoiToaDo
         private void Populate99OLon(string strMaHoa)
         {
             string[] array = strMaHoa.Split(new char[]
-			{
-				','
-			});
+            {
+                ','
+            });
             if (array.GetUpperBound(0) == 9)
             {
                 int num = 0;
@@ -306,9 +304,9 @@ namespace DoiToaDo
         private void Populate99CoBanCho1OLon(string strMaHoa)
         {
             string[] array = strMaHoa.Split(new char[]
-			{
-				','
-			});
+            {
+                ','
+            });
             if (array.GetUpperBound(0) == 99)
             {
                 int num = 0;
@@ -338,9 +336,9 @@ namespace DoiToaDo
         private void Populate99CoBan(string strMaHoa)
         {
             string[] array = strMaHoa.Split(new char[]
-			{
-				';'
-			});
+            {
+                ';'
+            });
             int num = array.GetUpperBound(0);
             if (num >= 0)
             {
@@ -423,9 +421,9 @@ namespace DoiToaDo
             bool result = true;
             string[] array = new string[100];
             string[] array2 = strMaHoa.Split(new char[]
-			{
-				','
-			});
+            {
+                ','
+            });
             if (array2.GetUpperBound(0) == 99)
             {
                 int num = 0;
@@ -569,7 +567,7 @@ namespace DoiToaDo
 
         private void UpdateChange()
         {
-            int num = checked((int)Math.Round(double.Parse(this.txtIndex.Text)));
+            int num = checked((int)Math.Round(m_index));
             this.strMaHoaCoBan[num] = this.GetCurrStr99CoBan();
 
             CMaHoa seleMaHoa = this.m_SeleMaHoa;
@@ -587,7 +585,6 @@ namespace DoiToaDo
                 CMaHoas.Update(this.m_SeleMaHoa);
             }
 
-            chkDoiTheoDongCot.Checked = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -673,7 +670,6 @@ namespace DoiToaDo
         {
             if (this.bLoaded)
             {
-                chkDoiTheoDongCot.Checked = false;
                 //Reset focus
                 for (int i = 0; i < 5; i++)
                 {
@@ -694,14 +690,14 @@ namespace DoiToaDo
                 int num2 = (int)Math.Round(double.Parse(textBox.Name.Substring(8, 1)));
                 int num3 = num * 2 + num2;
                 this.lblIndex.Text = string.Concat(new string[]
-					{
-						"- Trong ô lớn (",
-						num.ToString(),
-						", ",
-						num2.ToString(),
-						")"
-					});
-                this.txtIndex.Text = num3.ToString();
+                    {
+                        "- Trong ô lớn (",
+                        num.ToString(),
+                        ", ",
+                        num2.ToString(),
+                        ")"
+                    });
+                m_index = num3;
                 if (this.m_SeleCoBanIndex != num3)
                 {
                     this.strMaHoaCoBan[this.m_SeleCoBanIndex] = this.GetCurrStr99CoBan();
@@ -733,30 +729,12 @@ namespace DoiToaDo
 
         private void chkDoiTheoDongCot_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkDoiTheoDongCot.Checked)
+            for (int num = 0; num < 10; num++)
             {
-                for (int num = 0; num < 10; num++)
-                {
-                    Control txtCol = this.Controls.Find("col" + num.ToString("0"), true)[0];
-                    txtCol.Visible = chkDoiTheoDongCot.Checked;
-                    txtCol.Text = num.ToString("0");
-                    Control txtRow = this.Controls.Find("row" + num.ToString("0"), true)[0];
-                    txtRow.Visible = chkDoiTheoDongCot.Checked;
-                    txtRow.Text = num.ToString("0");
-                }
-
-            }
-            else
-            {
-                for (int num = 0; num < 10; num++)
-                {
-                    Control txtCol = this.Controls.Find("col" + num.ToString("0"), true)[0];
-                    txtCol.Visible = chkDoiTheoDongCot.Checked;
-                    txtCol.Text = num.ToString("0");
-                    Control txtRow = this.Controls.Find("row" + num.ToString("0"), true)[0];
-                    txtRow.Visible = chkDoiTheoDongCot.Checked;
-                    txtRow.Text = num.ToString("0");
-                }
+                Control txtCol = this.Controls.Find("col" + num.ToString("0"), true)[0];
+                txtCol.Text = num.ToString("0");
+                Control txtRow = this.Controls.Find("row" + num.ToString("0"), true)[0];
+                txtRow.Text = num.ToString("0");
             }
 
             //Reset focus
@@ -768,9 +746,7 @@ namespace DoiToaDo
                     if (objControls != null)
                     {
                         TextBox objTextBox = (TextBox)objControls[0];
-                        objTextBox.ReadOnly = chkDoiTheoDongCot.Checked;
-                        if (chkDoiTheoDongCot.Checked)
-                            objTextBox.Text = i.ToString() + j.ToString();
+                        objTextBox.Text = i.ToString() + j.ToString();
                     }
                 }
             }
@@ -789,7 +765,7 @@ namespace DoiToaDo
             {
                 Control txtCol = this.Controls.Find("col" + colIndex.ToString(), true)[0];
                 Control txtRow = this.Controls.Find("row" + rowIndex.ToString(), true)[0];
-                
+
                 string name = "txtCoBan" + rowIndex.ToString("0") + colIndex.ToString("0");
                 Control txtCoBan = this.Controls.Find(name, true)[0];
                 txtCoBan.Text = txtRow.Text + txtCol.Text;
@@ -897,7 +873,7 @@ namespace DoiToaDo
             {
                 e.Handled = true;
             }
-            
+
             Control obj = (Control)sender;
             if (obj.Text != "")
                 oldNum = int.Parse(obj.Text);
@@ -947,13 +923,12 @@ namespace DoiToaDo
                 }
             }
 
-            
+
         }
 
-        
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
 
-       
-
-        
+        }
     }
 }
