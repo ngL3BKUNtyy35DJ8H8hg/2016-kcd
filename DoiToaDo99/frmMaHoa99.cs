@@ -618,14 +618,7 @@ namespace DoiToaDo
 
         private void btnSave2_Click(object sender, EventArgs e)
         {
-            if (!KiemTraGiaTriHopLe())
-                return;
 
-            UpdateChange();
-
-            this.GBoxLst.Enabled = true;
-            this.EnableMaToaDo(false);
-            this.populateLst(this.m_SeleMaHoa.MaHoaID);
         }
 
         private void EnableMaToaDo(bool bChoPhep)
@@ -645,6 +638,29 @@ namespace DoiToaDo
             this.txtOLon31.ReadOnly = !bChoPhep;
             this.txtOLon40.ReadOnly = !bChoPhep;
             this.txtOLon41.ReadOnly = !bChoPhep;
+
+            this.row0.ReadOnly = !bChoPhep;
+            this.row1.ReadOnly = !bChoPhep;
+            this.row2.ReadOnly = !bChoPhep;
+            this.row3.ReadOnly = !bChoPhep;
+            this.row4.ReadOnly = !bChoPhep;
+            this.row5.ReadOnly = !bChoPhep;
+            this.row6.ReadOnly = !bChoPhep;
+            this.row7.ReadOnly = !bChoPhep;
+            this.row8.ReadOnly = !bChoPhep;
+            this.row9.ReadOnly = !bChoPhep;
+
+            this.col0.ReadOnly = !bChoPhep;
+            this.col1.ReadOnly = !bChoPhep;
+            this.col2.ReadOnly = !bChoPhep;
+            this.col3.ReadOnly = !bChoPhep;
+            this.col4.ReadOnly = !bChoPhep;
+            this.col5.ReadOnly = !bChoPhep;
+            this.col6.ReadOnly = !bChoPhep;
+            this.col7.ReadOnly = !bChoPhep;
+            this.col8.ReadOnly = !bChoPhep;
+            this.col9.ReadOnly = !bChoPhep;
+
             this.btnCancel.Enabled = bChoPhep;
         }
 
@@ -959,6 +975,11 @@ namespace DoiToaDo
         private void txtOLon00_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnKetThuc_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

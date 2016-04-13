@@ -175,7 +175,6 @@ namespace DoiToaDo
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.lstMaHoas = new System.Windows.Forms.ListBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.GBoxMaToaDo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.GBox99.SuspendLayout();
@@ -2103,26 +2102,24 @@ namespace DoiToaDo
             // 
             // btnKetThuc
             // 
-            this.btnKetThuc.Location = new System.Drawing.Point(4, 502);
+            this.btnKetThuc.Location = new System.Drawing.Point(1009, 566);
             this.btnKetThuc.Name = "btnKetThuc";
             this.btnKetThuc.Size = new System.Drawing.Size(69, 27);
             this.btnKetThuc.TabIndex = 224;
-            this.btnKetThuc.Text = "Kết thúc";
+            this.btnKetThuc.Text = "Thoát";
             this.btnKetThuc.UseVisualStyleBackColor = true;
-            this.btnKetThuc.Click += new System.EventHandler(this.btnSave2_Click);
+            this.btnKetThuc.Click += new System.EventHandler(this.btnKetThuc_Click);
             // 
             // GBoxLst
             // 
             this.GBoxLst.Controls.Add(this.Label46);
             this.GBoxLst.Controls.Add(this.btnUpdate);
-            this.GBoxLst.Controls.Add(this.btnDelete);
             this.GBoxLst.Controls.Add(this.btnCopy);
             this.GBoxLst.Controls.Add(this.btnNew);
             this.GBoxLst.Controls.Add(this.lstMaHoas);
-            this.GBoxLst.Controls.Add(this.btnKetThuc);
             this.GBoxLst.Location = new System.Drawing.Point(7, 8);
             this.GBoxLst.Name = "GBoxLst";
-            this.GBoxLst.Size = new System.Drawing.Size(239, 540);
+            this.GBoxLst.Size = new System.Drawing.Size(239, 546);
             this.GBoxLst.TabIndex = 225;
             this.GBoxLst.TabStop = false;
             // 
@@ -2137,7 +2134,7 @@ namespace DoiToaDo
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(79, 465);
+            this.btnUpdate.Location = new System.Drawing.Point(154, 507);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(69, 27);
             this.btnUpdate.TabIndex = 8;
@@ -2147,7 +2144,7 @@ namespace DoiToaDo
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(79, 502);
+            this.btnCopy.Location = new System.Drawing.Point(79, 507);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(69, 27);
             this.btnCopy.TabIndex = 7;
@@ -2157,7 +2154,7 @@ namespace DoiToaDo
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(4, 466);
+            this.btnNew.Location = new System.Drawing.Point(4, 507);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(69, 27);
             this.btnNew.TabIndex = 6;
@@ -2172,28 +2169,19 @@ namespace DoiToaDo
             this.lstMaHoas.ItemHeight = 16;
             this.lstMaHoas.Location = new System.Drawing.Point(4, 42);
             this.lstMaHoas.Name = "lstMaHoas";
-            this.lstMaHoas.Size = new System.Drawing.Size(229, 404);
+            this.lstMaHoas.Size = new System.Drawing.Size(229, 452);
             this.lstMaHoas.TabIndex = 5;
             this.lstMaHoas.SelectedIndexChanged += new System.EventHandler(this.lstMaHoas_SelectedIndexChanged);
             this.lstMaHoas.DoubleClick += new System.EventHandler(this.lstMaHoas_DoubleClick);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(154, 466);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(69, 27);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmMaHoa99
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 566);
+            this.ClientSize = new System.Drawing.Size(1105, 605);
             this.Controls.Add(this.GBoxMaToaDo);
             this.Controls.Add(this.GBoxLst);
+            this.Controls.Add(this.btnKetThuc);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
@@ -2363,6 +2351,5 @@ namespace DoiToaDo
         private TextBox col0;
         private Button btnKetThuc;
         private GroupBox groupBox1;
-        private Button btnDelete;
     }
 }
