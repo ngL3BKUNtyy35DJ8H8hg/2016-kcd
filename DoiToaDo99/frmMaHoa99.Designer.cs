@@ -53,7 +53,6 @@ namespace DoiToaDo
             this.row2 = new System.Windows.Forms.TextBox();
             this.row1 = new System.Windows.Forms.TextBox();
             this.row0 = new System.Windows.Forms.TextBox();
-            this.col9 = new System.Windows.Forms.TextBox();
             this.col8 = new System.Windows.Forms.TextBox();
             this.col7 = new System.Windows.Forms.TextBox();
             this.col6 = new System.Windows.Forms.TextBox();
@@ -175,6 +174,7 @@ namespace DoiToaDo
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.lstMaHoas = new System.Windows.Forms.ListBox();
+            this.col9 = new System.Windows.Forms.TextBox();
             this.GBoxMaToaDo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.GBox99.SuspendLayout();
@@ -367,6 +367,7 @@ namespace DoiToaDo
             // 
             // GBox99
             // 
+            this.GBox99.Controls.Add(this.col9);
             this.GBox99.Controls.Add(this.row9);
             this.GBox99.Controls.Add(this.row8);
             this.GBox99.Controls.Add(this.row7);
@@ -377,7 +378,6 @@ namespace DoiToaDo
             this.GBox99.Controls.Add(this.row2);
             this.GBox99.Controls.Add(this.row1);
             this.GBox99.Controls.Add(this.row0);
-            this.GBox99.Controls.Add(this.col9);
             this.GBox99.Controls.Add(this.col8);
             this.GBox99.Controls.Add(this.col7);
             this.GBox99.Controls.Add(this.col6);
@@ -624,20 +624,6 @@ namespace DoiToaDo
             this.row0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.row0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.row_KeyPress);
             this.row0.KeyUp += new System.Windows.Forms.KeyEventHandler(this.row_KeyUp);
-            // 
-            // col9
-            // 
-            this.col9.BackColor = System.Drawing.SystemColors.Window;
-            this.col9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.col9.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.col9.Location = new System.Drawing.Point(606, 56);
-            this.col9.MaxLength = 1;
-            this.col9.Name = "col9";
-            this.col9.Size = new System.Drawing.Size(50, 30);
-            this.col9.TabIndex = 236;
-            this.col9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.col9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.col_KeyPress);
-            this.col9.KeyUp += new System.Windows.Forms.KeyEventHandler(this.col_KeyUp);
             // 
             // col8
             // 
@@ -2174,6 +2160,19 @@ namespace DoiToaDo
             this.lstMaHoas.SelectedIndexChanged += new System.EventHandler(this.lstMaHoas_SelectedIndexChanged);
             this.lstMaHoas.DoubleClick += new System.EventHandler(this.lstMaHoas_DoubleClick);
             // 
+            // col9
+            // 
+            this.col9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.col9.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.col9.Location = new System.Drawing.Point(606, 56);
+            this.col9.MaxLength = 1;
+            this.col9.Name = "col9";
+            this.col9.Size = new System.Drawing.Size(50, 30);
+            this.col9.TabIndex = 247;
+            this.col9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.col9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.col_KeyPress);
+            this.col9.KeyUp += new System.Windows.Forms.KeyEventHandler(this.col_KeyUp);
+            // 
             // frmMaHoa99
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2339,7 +2338,6 @@ namespace DoiToaDo
         private TextBox row2;
         private TextBox row1;
         private TextBox row0;
-        private TextBox col9;
         private TextBox col8;
         private TextBox col7;
         private TextBox col6;
@@ -2351,5 +2349,6 @@ namespace DoiToaDo
         private TextBox col0;
         private Button btnKetThuc;
         private GroupBox groupBox1;
+        private TextBox col9;
     }
 }
