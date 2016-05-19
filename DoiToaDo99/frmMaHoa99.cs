@@ -624,7 +624,6 @@ namespace DoiToaDo
         private void EnableMaToaDo(bool bChoPhep)
         {
             this.btnSave.Enabled = bChoPhep;
-            this.btnKetThuc.Enabled = bChoPhep;
             this.txtTen.Enabled = bChoPhep;
             //this.GBox99.Enabled = bChoPhep;
             this.btn99MacDinh.Enabled = bChoPhep;
